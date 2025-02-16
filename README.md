@@ -28,27 +28,33 @@ This project provides a comprehensive set of trading bot implementations. The la
 ## 📦 Installation
 
 ### Requirements
-
 - **Python 3.8+**
 - **uvloop:**  
-  ```sh
-   pip install uvloop==0.21.0
-   orjson (pip install orjson==3.10.15)
-   aiohttp (pip install aiohttp==3.11.12)
-   unicorn_binance_websocket_api (pip install unicorn_binance_websocket_api==2.9.0)
-   pybit (pip install pybit==5.9.0)
-   termcolor (pip install termcolor==2.5.0)
+  `pip install uvloop==0.21.0`
+- **orjson:**  
+  `pip install orjson==3.10.15`
+- **aiohttp:**  
+  `pip install aiohttp==3.11.12`
+- **unicorn_binance_websocket_api:**  
+  `pip install unicorn_binance_websocket_api==2.9.0`
+- **pybit:**  
+  `pip install pybit==5.9.0`
+- **termcolor:**  
+  `pip install termcolor==2.5.0`
 
-Setup
-Clone the repository:
+### Setup
+1. **Clone the repository:**
+   ```sh
    git clone https://github.com/FrederikUrban/Python.git
    cd Python
-The repository structure is as follows:
-Python/
-├── HFT-Arbitrage/          # Contains the most recent HFT and arbitrage trading bots
-└── Trading-Algorithms/     # Contains earlier trading bot implementations and backtesting tools
-Install the required dependencies:
-   pip install -r requirements.txt
+2. **Repository Structure:**
+   ```sh
+    Python/
+    ├── HFT-Arbitrage/          # Contains the most recent HFT and arbitrage trading bots
+    └── Trading-Algorithms/     # Contains earlier trading bot implementations and backtesting tools
+3. Install Dependencies:
+   ```sh
+    pip install -r requirements.txt
    
 ## 🔬 Backtesting and Analysis
 The Trading-Algorithms folder includes various scripts and Jupyter Notebooks for backtesting trading strategies and analyzing performance. These tools can help you simulate historical scenarios and fine-tune your approach.
