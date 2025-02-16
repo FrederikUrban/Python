@@ -377,31 +377,14 @@ async def trading_strategy(price_update_event, close_event,
                 diff = spread // (PRICE_MULTIPLIER // DIFF_MULTIPLIER)
 
                 async with asyncio.TaskGroup() as tg:
-                    # Fast decision-making here.
-                    if diff % DIFF_STEP == 0:
-                        # OPEN POSITIONS if not already opened.
-                        if diff not in open_trades_LS and diff not in open_trades_SL:
-                            tg.create_task(openPos(diff, bybit_client, binance_client))
-                            close_event.set()
-                        
-                        # CLOSE POSITION: Check LS positions.
-                        for position in list(open_trades_LS.keys()):
-                            if diff - FEE - PROFIT > position:
-                                try:
-                                    tg.create_task(closeLS(position, diff, bybit_client, binance_client))
-                                    close_event.set()
-                                except Exception as e:
-                                    logger.error(f"{datetime.now().strftime('%m-%d %H:%M:%S.')}{str(datetime.now().microsecond)[:3]} Error closing positions LS: {e}")
-                        
-                        # CLOSE POSITION: Check SL positions.
-                        for position in list(open_trades_SL.keys()):
-                            if diff + FEE + PROFIT < position:
-                                try:
-                                    tg.create_task(closeSL(position, diff, bybit_client, binance_client))
-                                    close_event.set()
-                                except Exception as e:
-                                    logger.error(f"{datetime.now().strftime('%m-%d %H:%M:%S.')}{str(datetime.now().microsecond)[:3]} Error closing positions SL: {e}")
-
+                    ###################
+                    ###################
+                    ###################
+                    ###PRIVATE LOGIC###
+                    ###################
+                    ###################
+                    ###################
+                    
             except Exception as e:
                 logger.error(f"Strategy error: {str(e)}")
                 await asyncio.sleep(1)
