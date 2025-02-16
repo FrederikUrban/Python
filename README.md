@@ -4,21 +4,6 @@
 
 Welcome to the **TradingBot Collection**, a set of algorithmic trading bots developed in **Python** and integrated with **MetaTrader 5 (MT5)**. These bots are designed for **automated trading**, including **scalping, swing trading, and hybrid strategies**.
 
----
-
-## 📜 Table of Contents
-- [About the Project](#about-the-project)
-- [Features](#features)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Configuration](#configuration)
-- [Backtesting and Analysis](#backtesting-and-analysis)
-- [Trading Strategies](#trading-strategies)
-- [Performance Results](#performance-results)
-- [License](#license)
-
----
-
 ## 🚀 About the Project
 This repository contains multiple versions of trading bots, each tailored for different market conditions and strategies. These bots leverage **MetaTrader 5 (MT5) API** to execute trades based on technical indicators and price action.
 
